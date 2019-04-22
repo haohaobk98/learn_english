@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/listWord.css" rel="stylesheet" >
+    </head>
+    <body>
+        
+            <div class="center"><h2 class="page-title"><%=data.title%></h2></div>
+        <% data.word.forEach((da)=>{ %>
+            <div class="row">
+					<div class="col-md-9 col-sm-10">
+						<div class="lesson-content">
+							<div id="tab4" class="toggle-content"><div class="tuvung">
+									<div class="stt">
+										1	</div>
+									<div class="hinhanh">										
+										<img class="img-responsive img_left"  alt="abide by" title="abide by"  src=" <%=da.image %>">
+									</div>
+									<div class="noidung">
+											<span style="color: blue; font-size: 16px ! important;"><%=da.name%></span> <span style="color: red;"><%= da.phien_am%></span><br>
+											<span class="bold">Giải thích: </span><%=da.mean%><br>
+											<span class="bold">Từ loại: </span><%=da.loai%><br>
+                                            <span class="bold">Ví dụ: </span><%=da.example%></b><br>
+                                            <b class="bold"><%=da.dich%></b><br><br>
+                                            		
+											<audio controls="">
+													<source src="<%=da.audio%>" type="audio/mpeg">
+													Your browser does not support the audio element.
+												</audio>
+											
+											
+									</div>
+									
+								</div>
+                        </div> <!-- /.inner-content -->
+                        <div style="clear:both"></div>
+					</div> <!-- /.col-md-9 -->
+					
+                </div>
+                </div>
+                
+            <% }) %>
+    </body>
+</html>
